@@ -14,7 +14,9 @@ print(f"Dealer is showing a {dealer_card2}")
 user_total = (cards[user_card1] + cards[user_card2])
 print(f"Your current total is {user_total}")
 dealer_total = (cards[dealer_card2])
-print(f"Dealers total is {dealer_total}")
+print(f"Dealers shown total is {dealer_total}")
+if user_total == 21:
+    print("Blackjack! You win!")
 
 hit = input("Would you like to hit? (yes/no)\n# ").lower()
 while hit == "yes":
@@ -27,5 +29,7 @@ while hit == "yes":
     elif user_total > 21:
         print("YOU LOST")
         exit()
+
 else:
+    print(user_total)
     exit()
